@@ -22,7 +22,7 @@
                imp_physics_wsm6, imp_physics_fer_hires, prsi, ntinc,    &
                imp_physics_nssl, imp_physics_tempo,                     &
                prsl, prslk, rhcbot,rhcpbl, rhctop, rhcmax, islmsk,      &
-               work1, work2, kpbl, kinver, ras, me, save_lnc, save_inc, &
+               work1, work2, kpbl, kinver, ras, me, & !save_lnc, save_inc, &
                ldiag3d, qdiag3d, index_of_process_conv_trans,           &
                clw, rhc, save_qc, save_qi, save_tcp, errmsg, errflg)
 
@@ -44,7 +44,10 @@
       integer,                                          intent(in) :: ntinc, ntlnc
       logical,                                          intent(in) :: ldiag3d, qdiag3d
       integer,              dimension(:,:),             intent(in) :: dtidx
-      real,                 dimension(:,:),            intent(out) :: save_lnc, save_inc
+      ! ------------ Quick Fix ----------------------------------------------------------
+      !real,                 dimension(:,:),            intent(out) :: save_lnc, save_inc
+      real(kind_phys) :: save_lnc(im, levs) 
+      real(kind_phys) :: save_inc(im, levs)
 
       real(kind=kind_phys), intent(in   )                   :: rhcbot, rhcmax, rhcpbl, rhctop
       real(kind=kind_phys), intent(in   ), dimension(:)     :: work1, work2
