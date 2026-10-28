@@ -231,22 +231,22 @@
   type = real
   kind = kind_phys
   intent = in
-[save_lnc]
-  standard_name = liquid_cloud_number_concentration_save
-  long_name = liquid cloud number concentration before entering a physics scheme
-  units = kg kg-1
-  dimensions = (horizontal_loop_extent,vertical_layer_dimension)
-  type = real
-  kind = kind_phys
-  intent = in
-[save_inc]
-  standard_name = ice_cloud_number_concentration_save
-  long_name = ice cloud number concentration before entering a physics scheme
-  units = kg kg-1
-  dimensions = (horizontal_loop_extent,vertical_layer_dimension)
-  type = real
-  kind = kind_phys
-  intent = in
+#[save_lnc]
+#  standard_name = liquid_cloud_number_concentration_save
+#  long_name = liquid cloud number concentration before entering a physics scheme
+#  units = kg kg-1
+#  dimensions = (horizontal_loop_extent,vertical_layer_dimension)
+#  type = real
+#  kind = kind_phys
+#  intent = in
+#[save_inc]
+#  standard_name = ice_cloud_number_concentration_save
+#  long_name = ice cloud number concentration before entering a physics scheme
+#  units = kg kg-1
+#  dimensions = (horizontal_loop_extent,vertical_layer_dimension)
+#  type = real
+#  kind = kind_phys
+#  intent = in
 [con_pi]
   standard_name = pi
   long_name = ratio of a circle's circumference to its diameter
